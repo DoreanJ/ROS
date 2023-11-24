@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+ <launch>
+
+    <!-- Joy Node-->
+    <param name = "joy_node/dev"     value = "/dev/input/js0"/>
+    <node pkg="joy" type="joy_node" name="jn"/>
+    
+    
+    <!-- Encoder Node-->
+    <node pkg="plataforma_mov_pkg" type="encoder" name="encoders" output="screen"/>
+   
+   
+
+   
+  </launch>

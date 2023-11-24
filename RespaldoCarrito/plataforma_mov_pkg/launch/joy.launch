@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+ <launch>
+
+    <!-- Joy Node-->
+    <param name = "joy_node/dev"     value = "/dev/input/js0"/>
+    <node pkg="joy" type="joy_node" name="jn"/>
+    
+    <!-- Joy control Carro Node-->  
+    <node pkg="plataforma_mov_pkg" type="joy_car" name="joy"/>
+    
+    
+    <!-- Control de motores Node-->
+    <node pkg="plataforma_mov_pkg" type="motors" name="motores"/>
+    
+    
+    <!--Node lectura encoders-->
+    <node pkg="plataforma_mov_pkg" type="encoder" name="encoders" output="screen"/>
+    
+   <!--Node para de mpu-->
+    
+  <param name = "acceleration_x_m"     value = "-0.9838904164684757"/>
+  <param name = "acceleration_y_m"     value = "-0.98162129827053"/>
+  <param name = "acceleration_z_m"     value = "-0.9636070642655911"/>
+
+  <param name = "acceleration_x_b"     value = "-0.0010117117044968625"/>
+  <param name = "acceleration_y_b"     value = "-0.0010117117044968625"/>
+  <param name = "acceleration_z_b"     value = "0.019967832698405238"/>
+
+
+  <param name = "gyro_x_offset"     value = "-2.4516641221374047"/>
+  <param name = "gyro_y_offset"     value = "0.6235267175572519"/>
+  <param name = "gyro_z_offset"     value = "-0.06480916030534348"/>
+
+  <node name="mpu_node" pkg="mpu6050" type="imu_node" output="screen"/>
+    
+    
+    <!--Node visualizacion de datos -->
+    
+    <node pkg="plataforma_mov_pkg" type="mostrar" name="view" output="screen"/>
+
+   
+   
+
+   
+  </launch>

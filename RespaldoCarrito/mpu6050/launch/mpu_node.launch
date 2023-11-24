@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+  <param name = "acceleration_x_m"     value = "-0.9838904164684757"/>
+  <param name = "acceleration_y_m"     value = "-0.98162129827053"/>
+  <param name = "acceleration_z_m"     value = "-0.9636070642655911"/>
+
+  <param name = "acceleration_x_b"     value = "-0.0010117117044968625"/>
+  <param name = "acceleration_y_b"     value = "-0.0010117117044968625"/>
+  <param name = "acceleration_z_b"     value = "0.019967832698405238"/>
+
+
+  <param name = "gyro_x_offset"     value = "-2.4516641221374047"/>
+  <param name = "gyro_y_offset"     value = "0.6235267175572519"/>
+  <param name = "gyro_z_offset"     value = "-0.06480916030534348"/>
+
+  <node name="mpu_node" pkg="mpu6050" type="imu_node" output="screen"/>
+
+</launch>

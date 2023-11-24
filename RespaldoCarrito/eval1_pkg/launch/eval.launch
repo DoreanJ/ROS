@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+ <launch>
+
+     <!-- Turtlesim Node-->
+
+    <node pkg="turtlesim" type="turtle_teleop_key" name="teleop" output="screen"/>    
+    
+    <!-- Nodos de Evaluacion -->
+    
+    <node pkg="eval1_pkg" type="pins_read" name="LecturaPins" output="screen"/> 
+    <node pkg="eval1_pkg" type="subs_teleop" name="ControlMotor" output="screen"/>
+   
+  </launch>
